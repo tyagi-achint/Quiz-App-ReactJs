@@ -16,7 +16,7 @@ To run this application locally, follow these steps:
 1. Clone the repository:
 
    ```bash
-   git clone <repository_url>
+   git clone https://github.com/tyagi-achint/Quiz-App-ReactJs.git
    ```
 
 2. Navigate into the project directory:
