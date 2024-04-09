@@ -360,3 +360,13 @@ header h1 {
     transform: translateY(0);
   }
 }
+
+@media screen and (max-width: 550px) {
+  #summary-stats {
+    display: grid;
+    gap: 1rem;
+  }
+  #summary h2 {
+    font-size: 2rem;
+  }
+}
