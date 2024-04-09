@@ -8,6 +8,7 @@ This is a simple quiz application built using React. It allows users to take a q
 - Users can select answers, skip questions, and view their quiz summary.
 - Provides a summary of quiz results including correct, wrong, and skipped answers.
 - Allows users to restart the quiz.
+- Offer multiple quiz options for users to choose from.
 
 ## Installation
 

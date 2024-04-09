@@ -49,6 +49,11 @@ body {
   border: 3px solid black;
 }
 
+#HomePage button {
+  display: inline-grid;
+  margin: 10px;
+}
+
 header,
 #HomePage {
   margin: 2rem 0;

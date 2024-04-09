@@ -1,9 +1,13 @@
 import { useState } from "react";
 import Answers from "./Answers";
 import QuestionTimer from "./QuestionTimer";
-import QUESTIONS from "../questoins.js";
 
-export default function Question({ index, onSelectAnswer, onSkipAnswer }) {
+export default function Question({
+  index,
+  onSelectAnswer,
+  onSkipAnswer,
+  QUESTIONS,
+}) {
   const [answer, setAnswer] = useState({
     selectedAnswer: "",
     isCorrect: null,

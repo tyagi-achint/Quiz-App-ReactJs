@@ -4,20 +4,20 @@ import HomePage from "./Components/HomePage";
 import Quiz from "./Components/Quiz";
 
 export default function App() {
-  const [quizStarted, setQuizStarted] = useState(false);
+  const [quizType, setQuizType] = useState(null);
 
-  const handleStartQuiz = () => {
-    setQuizStarted(true);
+  const handleStartQuiz = (quizType) => {
+    setQuizType(quizType);
   };
 
   return (
     <>
       <Header />
-      {!quizStarted ? (
+      {!quizType ? (
         <HomePage onStartQuiz={handleStartQuiz} />
       ) : (
         <main>
-          <Quiz />
+          <Quiz quizType={quizType} />
         </main>
       )}
     </>

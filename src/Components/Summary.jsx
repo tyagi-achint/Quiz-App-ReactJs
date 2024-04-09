@@ -1,7 +1,6 @@
 import quizCompleteImg from "../assets/quiz-complete.png";
-import QUESTIONS from "../questoins.js";
 
-export default function Summary({ userAnswers, onRestartQuiz }) {
+export default function Summary({ userAnswers, QUESTIONS }) {
   const handleRestartQuiz = () => {
     window.location.reload();
   };

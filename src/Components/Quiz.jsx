@@ -1,9 +1,25 @@
 import { useCallback, useState } from "react";
-import QUESTIONS from "../questoins.js";
+import {
+  javaQuestions,
+  pythonQuestions,
+  reactQuestions,
+  javascriptQuestions,
+} from "../questoins.js";
 import Question from "./Question.jsx";
 import Summary from "./Summary.jsx";
 
-export default function Quiz() {
+export default function Quiz({ quizType }) {
+  let QUESTIONS;
+  if (quizType === "react") {
+    QUESTIONS = reactQuestions;
+  } else if (quizType === "python") {
+    QUESTIONS = pythonQuestions;
+  } else if (quizType === "javascript") {
+    QUESTIONS = javascriptQuestions;
+  } else {
+    QUESTIONS = javaQuestions;
+  }
+
   const [userAnswer, setUserAnswer] = useState([]);
 
   const activeQuestionIndex = userAnswer.length;
@@ -25,7 +41,7 @@ export default function Quiz() {
   );
 
   if (quizComplete) {
-    return <Summary userAnswers={userAnswer} />;
+    return <Summary userAnswers={userAnswer} QUESTIONS={QUESTIONS} />;
   }
 
   return (
@@ -35,6 +51,7 @@ export default function Quiz() {
         index={activeQuestionIndex}
         onSelectAnswer={handleSelectAnswer}
         onSkipAnswer={handleSkipAnswer}
+        QUESTIONS={QUESTIONS}
       />
     </div>
   );

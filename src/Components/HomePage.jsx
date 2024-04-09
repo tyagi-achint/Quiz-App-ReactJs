@@ -1,21 +1,11 @@
-import React, { useState } from "react";
-
 export default function HomePage({ onStartQuiz }) {
-  const [quizStarted, setQuizStarted] = useState(false);
-
-  const handleStartQuiz = () => {
-    setQuizStarted(true);
-    onStartQuiz();
-  };
-
   return (
     <div id="HomePage">
-      {quizStarted ? null : (
-        <>
-          <h2>Ready!</h2>
-          <button onClick={handleStartQuiz}>Start Quiz</button>
-        </>
-      )}
+      <h2>Ready!</h2>
+      <button onClick={() => onStartQuiz("react")}>React Quiz</button>
+      <button onClick={() => onStartQuiz("python")}>Python Quiz</button>
+      <button onClick={() => onStartQuiz("javascript")}>JavaScript Quiz</button>
+      <button onClick={() => onStartQuiz("java")}>Java Quiz</button>
     </div>
   );
 }
